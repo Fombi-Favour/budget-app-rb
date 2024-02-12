@@ -1,0 +1,97 @@
+/***************** mobile styles (default) ***********************/
+
+.main-form {
+  background: #d9d9d9;
+  max-width: 100%;
+  height: 100vh;
+}
+
+#error_explanation {
+  background: #ff0101;
+  color: #fff;
+  padding: 0 12px;
+}
+
+nav {
+  background: var(--main);
+  color: #f7f7f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+nav img {
+  width: 45px;
+  height: 30px;
+}
+
+nav h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.btn-submit {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.415rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.reg-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #b6b4b4;
+  background: #fff;
+  margin: 10px 0;
+}
+
+.field-rem {
+  padding: 12px 0 12px 10px;
+}
+
+.field-rem label {
+  font-size: 1.117rem;
+  color: #8a8585;
+}
+
+.field-input {
+  width: 95%;
+  height: 30px;
+  outline: none;
+  border: none;
+  padding: 10px 12px;
+  font-size: 1.175rem;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.32);
+}
+
+.field-input::placeholder {
+  opacity: 0.4;
+}
+
+.field-input:focus {
+  width: 95%;
+}
+
+.text-swap {
+  text-align: center;
+  font-size: 1.046rem;
+  padding-top: 20px;
+}
+
+.text-swap a {
+  color: var(--main);
+  letter-spacing: 0.1rem;
+}
+
+/***************** tablet styles ***********************/
+
+@media only screen and (min-width: 768px) {
+  .text-swap {
+    font-size: 1.406rem;
+  }
+}

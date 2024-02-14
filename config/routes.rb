@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: [:index, :show, :new, :create]
+  # resources :expenses, only: [:index, :show, :new, :create]
 end

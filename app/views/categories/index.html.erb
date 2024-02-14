@@ -1,6 +1,40 @@
-<h1>Categories#index</h1>
-<p>Find me in app/views/categories/index.html.erb</p>
+<header>
+  <nav>
+    <h3>PennyWise</h3>
+    <p>categories</p>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: "btn-out" %>
+  </nav>
+</header>
 
-<% if user_signed_in? %>
-  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-<% end %>
+<section class="main-page">
+  <div class="section-list">
+    <% if @categories.empty? %>
+      <p>No categories. Create one now!!!</p>
+    <% else %>
+      <ul>
+        <% @categories.each do |category| %>
+          <li>
+            <%= link_to category_path(category.id) do %>
+              <div class="item">
+                <%= image_tag(category.icon) %>
+                <div class="col">
+                  <div class="col-text">
+                    <span class="name"> <%= category.name %> </span>
+                    <span class="total"> $17.00 </span>
+                  </div>
+                  <span class="date"> <%= category.created_at.strftime('%d %b %Y')  %> </span>
+                </div>
+              </div>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</section>
+
+<footer>
+  <div class="btn-section">
+    <%= link_to 'add category', new_category_path, class: "btn-add" %>
+  </div>
+</footer>

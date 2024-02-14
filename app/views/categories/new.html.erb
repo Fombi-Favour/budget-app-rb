@@ -1,0 +1,18 @@
+<section class="main-form">
+  <%= form_with model: @category, url: categories_path, scope: :category do |f| %>
+    <nav>
+      <%= link_to authenticated_root_path do %>
+        <%= image_tag("left-arrow.svg") %>
+      <% end %>
+      <p>new category</p>
+      <%= f.submit "Create", class: "btn-submit" %>
+    </nav>
+
+    <div class="form-section">
+      <div class="form-input">
+        <%= f.text_field :name, placeholder: "Category name", autocomplete: true, class: "input-field", required: true %>
+        <%= f.text_field :icon, placeholder: "Icon URL (e.g https://source.unsplash.com/random)", class: "input-field", required: true %>
+      </div>
+    </div>
+  <% end %>
+</section>

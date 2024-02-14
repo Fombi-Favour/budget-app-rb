@@ -1,10 +1,4 @@
 /***************** mobile styles (default) ***********************/
-.main-page {
-  background: #f3eded;
-  max-width: 100%;
-  height: 100vh;
-}
-
 nav h3 {
   font-family: 'Lobster', cursive;
   font-weight: 500;
@@ -17,11 +11,140 @@ nav p {
   letter-spacing: 0.15rem;
 }
 
+.main-page {
+  background: #f3eded;
+  max-width: 100%;
+  height: 90vh;
+  overflow-y: scroll;
+}
+
+.main-page::-webkit-scrollbar {
+  display: none;
+}
+
+.section-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-list p {
+  font-size: 1.325rem;
+  margin-top: 65%;
+}
+
+.section-list ul {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.section-list ul li {
+  background: #fff;
+  margin-bottom: 12px;
+  width: 320px;
+  height: 100px;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.btn-section a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 1.275rem;
+}
+
+.section-list ul li a {
+  text-decoration: none;
+  color: #434b54;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.col-text {
+  display: flex;
+  gap: 5rem;
+  font-size: 1.275rem;
+}
+
+.name,
+.date {
+  color: #999;
+}
+
+.total {
+  font-weight: 600;
+}
+
 .btn-out {
   text-decoration: none;
   color: #fafafa;
   font-size: 1.187rem;
   letter-spacing: 0.13rem;
+}
+
+footer {
+  background: var(--second);
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
+}
+
+.btn-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #d9d9d9;
+  border-radius: 4px;
+  height: 40px;
+  margin: 0 20px;
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.form-input {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 24px 10px;
+  width: 300px;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  width: 280px;
+  height: 30px;
+  outline: none;
+  padding: 0 0 0 5px;
+  border: none;
+  border-bottom: 2px solid #434b54;
+  font-size: 1.025rem;
 }
 
 /***************** tablet styles ***********************/
@@ -35,10 +158,39 @@ nav p {
     font-size: 1.825rem;
     letter-spacing: 0.2rem;
   }
+
+  .section-list p {
+    font-size: 1.725rem;
+    margin-top: 50%;
+  }
+
+  .form-input {
+    width: 650px;
+    gap: 18px;
+  }
+
+  .input-field {
+    width: 500px;
+  }
+
+  .section-list ul li {
+    width: 600px;
+  }
+
+  .col-text {
+    gap: 18rem;
+    font-size: 1.675rem;
+  }
+
+  .date {
+    font-size: 1.025rem;
+  }
 }
 
 /***************** desktop styles ***********************/
 
 @media only screen and (min-width: 1024px) {
-
+  .section-list p {
+    margin-top: 15%;
+  }
 }

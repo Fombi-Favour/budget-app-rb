@@ -1,0 +1,45 @@
+<header>
+  <nav>
+    <%= link_to authenticated_root_path do %>
+      <%= image_tag("left-arrow.svg") %>
+    <% end %>
+    <p>expenses</p>
+    <%= image_tag("logo.png", class: "logo") %>
+  </nav>
+</header>
+
+<section class="detail-page">
+  <div class="category-page">
+    <%= render partial: "categories/category", locals: { category: @category } %>
+  </div>
+
+  <div class="section-list">
+    <h3 class="section-title">Transactions</h3>
+    <% if @expenses.empty? %>
+      <p>No transactions. Create one now!!!</p>
+    <% else %>
+      <ul class="list">
+        <% @expenses.each do |expense| %>
+         <li class="sub-list">
+           <div class="list-col">
+             <span class="name"> <%= expense.name %> </span>
+             <div class="date">
+               <%= image_tag("calender.svg") %>
+               <span class="time"> <%= expense.created_at.strftime('%d %b %y') %> at <%= expense.created_at.strftime("%r") %> </span>
+             </div>
+           </div>
+           <div class="list-col">
+             <span class="amount"> $<%= expense.amount %> </span>
+           </div>
+         </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+</section>
+
+<footer>
+  <div class="btn-section">
+    <%= link_to 'add expenses', new_expense_path, class: "btn-add" %>
+  </div>
+</footer>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     authenticated :user do
       root 'categories#index', as: :authenticated_root
+      get '/users/sign_out' => 'devise/sessions#destroy'
     end
     unauthenticated do
       root 'splash#home', as: :unauthenticated_root
@@ -11,5 +12,5 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: [:index, :show, :new, :create]
-  # resources :expenses, only: [:index, :show, :new, :create]
+  resources :expenses, only: [:new, :create]
 end

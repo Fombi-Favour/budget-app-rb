@@ -1,0 +1,14 @@
+<li class="list-item">
+  <%= link_to category_path(category.id) do %>
+    <div class="item">
+      <%= image_tag(category.icon) %>
+      <div class="col">
+        <div class="col-text">
+          <span class="name"> <%= category.name %> </span>
+          <span class="total"> $<%= category.total %> </span>
+        </div>
+        <span class="date"> <%= category.created_at.strftime('%d %b %Y')  %> </span>
+      </div>
+    </div>
+  <% end %>
+</li>

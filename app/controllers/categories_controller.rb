@@ -1,6 +1,13 @@
 class CategoriesController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @categories = current_user.categories.order(:created_at)
+  end
+
+  def show
+    @category = Category.includes(:expenses).find(params[:id])
+    @expenses = @category.recent_expenses
   end
 
   def new

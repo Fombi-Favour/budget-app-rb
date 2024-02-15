@@ -13,20 +13,7 @@
     <% else %>
       <ul>
         <% @categories.each do |category| %>
-          <li>
-            <%= link_to category_path(category.id) do %>
-              <div class="item">
-                <%= image_tag(category.icon) %>
-                <div class="col">
-                  <div class="col-text">
-                    <span class="name"> <%= category.name %> </span>
-                    <span class="total"> $17.00 </span>
-                  </div>
-                  <span class="date"> <%= category.created_at.strftime('%d %b %Y')  %> </span>
-                </div>
-              </div>
-            <% end %>
-          </li>
+          <%= render partial: "category", locals: { category: category } %>
         <% end %>
       </ul>
     <% end %>

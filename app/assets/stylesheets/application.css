@@ -3,7 +3,7 @@
 @import 'splash.css';
 @import 'devise.css';
 @import 'category.css';
-@import "transaction.css";
+@import "expense.css";
 
 * {
   padding: 0;

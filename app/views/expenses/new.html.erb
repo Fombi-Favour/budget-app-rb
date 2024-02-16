@@ -14,7 +14,7 @@
         <%= f.number_field :amount, placeholder: "Amount", class: "input-field", required: true %>
         <div class="select-field">
           <%= f.label :category %>
-          <%= f.collection_select(:category_ids, Category.all, :id, :name, { prompt: true }, { multiple: true, required: true }) %>
+          <%= f.collection_select(:category_ids, current_user.categories, :id, :name, { prompt: true }, { multiple: true, required: true }) %>
         </div>
       </div>
     </div>

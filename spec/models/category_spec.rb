@@ -4,7 +4,7 @@ RSpec.describe Category, type: :model do
   describe 'Category validations' do
     before do
       user = User.create(name: 'example')
-      @category = Category.new(id: 1, name: 'category 0', icon: 'icon 0', user: user)
+      @category = Category.new(id: 1, name: 'category 0', icon: 'icon 0', user:)
     end
 
     it 'should validate name' do

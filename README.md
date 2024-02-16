@@ -16,6 +16,10 @@
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
+![mobile1](https://github.com/Fombi-Favour/budget-app-rb/assets/77404317/ba752cca-7255-4318-bc4f-a4711004b675) 
+![mobile2](https://github.com/Fombi-Favour/budget-app-rb/assets/77404317/1f00fcd7-269c-432b-a224-813ce24d8a9b)
+![mobile3](https://github.com/Fombi-Favour/budget-app-rb/assets/77404317/7a4c0102-4ad6-40d7-a58f-8b8a6914f65f)
+![mobile4](https://github.com/Fombi-Favour/budget-app-rb/assets/77404317/ec51de77-5bdd-4ec9-9d3f-1c2329b4ebd3)
 
 # 📖 [Budget App] <a name="about-project"></a>
 

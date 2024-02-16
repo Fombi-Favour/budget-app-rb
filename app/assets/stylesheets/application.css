@@ -1,9 +1,9 @@
-@import url('https://fonts.cdnfonts.com/css/proxima-nova-condensed?styles=53279,53283,53277,53281');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import 'splash.css';
-@import 'devise.css';
-@import 'category.css';
-@import "expense.css";
+/*
+  *= require splash
+  *= require devise
+  *= require category
+  *= require expense
+*/
 
 * {
   padding: 0;

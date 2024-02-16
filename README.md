@@ -87,9 +87,16 @@ Clone this repository to your desired folder:
 
 ### Deployment
 
-You can deploy this project using: [render](https://render.com/)
+[Live Demo Link. Click here!](https://pennywise-tmwb.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🎥 Presentation <a name="live-demo"></a>
+
+- Check out the presentation for this project [Click here!](https://www.loom.com/share/2abc05a4b9164e9fab8f8648ab90ad36?sid=4b6c0849-f449-4533-adf7-1e220583f3a0)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- AUTHORS -->
 

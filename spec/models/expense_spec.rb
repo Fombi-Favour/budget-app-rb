@@ -4,7 +4,7 @@ RSpec.describe Expense, type: :model do
   describe 'Expense validations' do
     before(:each) do
       user = User.create(id: 1, name: 'example')
-      @expenses = Expense.new(name: 'expense1', amount: 150, user: user)
+      @expenses = Expense.new(name: 'expense1', amount: 150, user:)
     end
 
     it 'should validate name' do

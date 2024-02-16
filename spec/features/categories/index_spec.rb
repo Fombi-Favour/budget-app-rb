@@ -4,8 +4,11 @@ RSpec.feature 'Categories index page', type: :feature do
   before(:each) do
     @user = User.create(name: 'example', email: 'example@example.com', password: '123456')
     sign_in @user
-    @category = Category.create(name: 'category',
-                                icon: 'https://images.pexels.com/photos/20021296/pexels-photo-20021296/free-photo-of-lottery-scrabble-letters-on-a-wooden-table.jpeg?auto=compress&cs=tinysrgb&w=600', user_id: @user.id)
+    @category = Category.create(
+      name: 'category',
+      icon: 'https://images.pexels.com/photos/20021296/pexels-photo-20021296/free-photo-of-lottery-scrabble-letters-on-a-wooden-table.jpeg?auto=compress&cs=tinysrgb&w=600',
+      user_id: @user.id
+    )
     5.times.each do |i|
       Expense.create(name: "expense#{i}", amount: 20, author_id: @user.id, category_ids: @category.id)
     end
